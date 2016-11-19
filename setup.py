@@ -10,5 +10,7 @@ setup(
     author_email='me@leonidumanskiy.com',
     description='scheduled tasks for Python 3',
     keywords=['scheduled', 'tasks', 'cron'],
-    classifiers=[]
+    classifiers=[
+        'Programming Language :: Python :: 3.5',
+    ]
 )
