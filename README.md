@@ -2,6 +2,8 @@ Copyright 2016 Leonid Umanskiy
 
 Released under MIT license
 
+[![Build Status](https://travis-ci.org/leonidumanskiy/scheduledtask.svg?branch=master)](https://travis-ci.org/leonidumanskiy/scheduledtask)
+
 # Description
 This package provides functionality to work with scheduled tasks (cron-alike) in Python.
 The main intention is to let you use planned scheduled tasks in lazy environments, 
