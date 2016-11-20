@@ -25,7 +25,7 @@ pip install scheduledtask
 from scheduledtask import ScheduledTask
 
 task = ScheduledTask(minutes=[0, 30], hours=[0], days=None, months=None, years=None)
-print(task.get_next_time(date))
+print(task.get_next_time())
 ```
 
 ####Task that executes every 1st day of Month
@@ -34,7 +34,7 @@ from scheduledtask import ScheduledTask
 from datetime import datetime
 
 task = ScheduledTask(minutes=[0], hours=[0], days=[1], months=None, years=None)
-print(task.get_previous_time(date, current_datetime=datetime(2016, 11, 19))  
+print(task.get_previous_time(current_datetime=datetime(2016, 11, 19))  
 # Prints datetime(2016, 12, 1, 0, 0))
 ```
 
@@ -45,8 +45,8 @@ from scheduledtask import ScheduledTask
 
 task = ScheduledTask(minutes=[0], hours=[0], days_of_week=[0], days_of_week_num=[0], months=[11], 
                      years=range(1848, 9999, 4))
-print(task.get_next_time(date) + timedelta(days=1))
-print(task.get_previous_time(date) + timedelta(days=1))
+print(task.get_next_time() + timedelta(days=1))
+print(task.get_previous_time() + timedelta(days=1))
 ```
 
 # Rules
