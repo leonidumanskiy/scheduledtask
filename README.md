@@ -5,14 +5,14 @@ Released under MIT license
 [![Build Status](https://travis-ci.org/leonidumanskiy/scheduledtask.svg?branch=master)](https://travis-ci.org/leonidumanskiy/scheduledtask)
 
 # Description
-This package provides functionality to work with scheduled tasks (cron-alike) in Python.
+This package provides functionality to work with scheduled tasks (cron-like) in Python.
 The main intention is to let you use planned scheduled tasks in lazy environments, 
-like web server, by providing functions to check previous and next execution time of the task (**get_previous_time** and **get_next_time**).
+such as web server, by providing functions to check previous and next execution time of the task (**get_previous_time** and **get_next_time**).
 
 This package doesn't parse cron string and is not fully compatible with cron. 
 It currently doesn't support last day of month and last weekday functionality, 
-however it supports providing day of week number (#) or providing a week number.
-Rules can be provided in a form of list of integers, range (step will be counted), or None.
+however it supports providing the day of week number (#) or providing a week number.
+Rules can be provided in a form of list of integers, range object (start, stop, and step will be used), or None.
 
 # Installation
 ```
