@@ -82,3 +82,5 @@ When calling **get_previous_time** or **get_next_time**, you can provide **curre
 If no current datetime is provided, datetime.utcnow() will be used. 
 **current_datetime** doesn't have to be in UTC-format. This library is timezone-agnostic and will return result using the same timezone as current_datetime.
 
+# Contributing
+If you find a bug in the library, please feel free to contribute by opening an issue or creating a pull request.
