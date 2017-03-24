@@ -20,7 +20,7 @@ pip install scheduledtask
 ```
 
 # Quick start
-####Task that executes twice a day: at 00:00 and 00:30, get next execution time
+#### Task that executes twice a day: at 00:00 and 00:30, get next execution time
 ```python
 from scheduledtask import ScheduledTask
 
@@ -28,7 +28,7 @@ task = ScheduledTask(minutes=[0, 30], hours=[0], days=None, months=None, years=N
 print(task.get_next_time())
 ```
 
-####Task that executes every 1st day of Month
+#### Task that executes every 1st day of Month
 ```python
 from scheduledtask import ScheduledTask
 from datetime import datetime
@@ -38,7 +38,7 @@ print(task.get_previous_time(current_datetime=datetime(2016, 11, 19))
 # Prints datetime(2016, 12, 1, 0, 0))
 ```
 
-####More complex example:
+#### More complex example:
 Get next and previous USA presidential election day by getting the next day after first monday of November every 4rth year
 ```python
 from scheduledtask import ScheduledTask
