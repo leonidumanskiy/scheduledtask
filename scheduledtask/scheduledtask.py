@@ -206,11 +206,14 @@ class ScheduledTask:
         datetimeholder_increased = copy(result)
         datetimeholder_increased[fraction.name] = new_value
         if increment > 0:  # 1
-            in_range = get_smallest_value_greater_or_equal_to(self.candidates[fraction.value],
-                                                          datetimeholder_increased[fraction.name]) is not None
+
+            new_value = get_smallest_value_greater_or_equal_to(self.candidates[fraction.value],
+                                                          datetimeholder_increased[fraction.name])
+            in_range = new_value is not None
         else:  # -1
-            in_range = get_biggest_value_less_or_equal_to(self.candidates[fraction.value],
-                                                          datetimeholder_increased[fraction.name]) is not None
+            new_value = get_biggest_value_less_or_equal_to(self.candidates[fraction.value],
+                                                          datetimeholder_increased[fraction.name])
+            in_range = new_value is not None
 
         if self._datetimeholder_valid(datetimeholder_increased, fraction) and in_range:
             result[fraction.name] = new_value
