@@ -158,6 +158,8 @@ class ScheduledTask:
             day = weekday_and_week_to_day(datetimeholder.year, datetimeholder.month, datetimeholder.week,
                                           datetimeholder.day_of_week)
             n_days_in_month = num_days_in_month(datetimeholder.year, datetimeholder.month)
+            if day is None:
+                return False
             if day > n_days_in_month:
                 return False
 
